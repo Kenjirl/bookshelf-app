@@ -38,7 +38,7 @@ button {
     display: flex;
     align-items: center;
     justify-content: center;
-    background-color: var(--color-1);
+    background-color: #ffffff;
     color: white;
 }
 
