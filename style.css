@@ -38,7 +38,7 @@ button {
     display: flex;
     align-items: center;
     justify-content: center;
-    background-color: #ffffff;
+    background-color: var(--color-1);
     color: white;
 }
 
@@ -311,7 +311,7 @@ main > .alert > p {
 
 @media screen and (max-width: 1000px) {
     main {
-        width: 95%;
+        width: 100%;
         display: block;
     }
 
