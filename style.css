@@ -200,6 +200,10 @@ main {
     background-color: var(--color-3);
 }
 
+.search_section > p {
+    font-size: 16px;
+}
+
 .book_shelf_section {
     background-color: white;
 }
@@ -307,6 +311,7 @@ main > .alert > p {
 
 @media screen and (max-width: 1000px) {
     main {
+        width: 95%;
         display: block;
     }
 
