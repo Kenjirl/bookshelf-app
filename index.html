@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta
+            name="viewport"
+            content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0"
+        />
+        <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+        <title>Bookshelf Apps</title>
+        <link rel="stylesheet" href="style.css" />
+        <script src="main.js" defer></script>
+        <script
+            src="https://kit.fontawesome.com/5b8fa639bb.js"
+            crossorigin="anonymous"
+        ></script>
+    </head>
+    <body>
+        <header class="head_bar">
+            <h1 class="head_bar__title">Bookshelf Apps</h1>
+        </header>
+
+        <main>
+            <div class="book_input_section">
+                <section class="input_section">
+                    <h2>Masukkan Buku Baru</h2>
+                    <form id="inputBook">
+                        <div class="input">
+                            <label for="inputBookTitle">Judul</label>
+                            <input
+                                id="inputBookTitle"
+                                type="text"
+                                placeholder="masukkan judul buku"
+                                required
+                            />
+                        </div>
+                        <div class="input">
+                            <label for="inputBookAuthor">Penulis</label>
+                            <input
+                                id="inputBookAuthor"
+                                type="text"
+                                placeholder="masukkan nama penulis buku"
+                                required
+                            />
+                        </div>
+                        <div class="input">
+                            <label for="inputBookYear">Tahun</label>
+                            <input
+                                id="inputBookYear"
+                                type="number"
+                                placeholder="masukkan tahun terbit buku"
+                                required
+                            />
+                        </div>
+                        <div class="input_inline">
+                            <label for="inputBookIsComplete"
+                                >Selesai dibaca</label
+                            >
+                            <input
+                                id="inputBookIsComplete"
+                                type="checkbox"
+                                onclick="changeSubmitBookButtonText()"
+                            />
+                        </div>
+                        <button id="bookSubmit" type="submit">
+                            Masukkan Buku ke rak
+                            <span>Belum selesai dibaca</span>
+                        </button>
+                    </form>
+                </section>
+
+                <section class="search_section">
+                    <h2>Cari Buku (Opsional)</h2>
+                    <form id="searchBook">
+                        <label for="searchBookTitle">Judul : </label>
+                        <input
+                            id="searchBookTitle"
+                            placeholder="masukkan judul buku"
+                            type="text"
+                        />
+                        <button id="searchSubmit" type="submit">Cari</button>
+                    </form>
+                    <p>
+                        Hint : <br />
+                        - masukkan judul buku yang ingin dicari pada input bar
+                        di atas <br />
+                        - untuk menampilkan kembali semua buku, hapus judul buku
+                        pada input bar di atas <br />
+                        - klik tombol "Cari" untuk setiap aksi di atas <br />
+                        - huruf besar atau kecil tidak berpengaruh (<i
+                            >not case sensitive</i
+                        >) <br />
+                        - tidak perlu judul lengkap
+                    </p>
+                </section>
+            </div>
+
+            <div class="book_shelf_section">
+                <section class="book_shelf">
+                    <h2>Belum selesai dibaca</h2>
+
+                    <div id="incompleteBookshelfList" class="book_list">
+                        <!-- <article class="book_item">
+                            <div>
+                                <h3>Book Title</h3>
+                                <p>Penulis: John Doe</p>
+                                <p>Tahun: 2002</p>
+                            </div>
+
+                            <div class="action">
+                                <button class="green">
+                                    <i class="fa-solid fa-check"></i>
+                                </button>
+                                <button class="red">
+                                    <i class="fa-solid fa-trash-can"></i>
+                                </button>
+                            </div>
+                        </article> -->
+                    </div>
+                </section>
+
+                <section class="book_shelf">
+                    <h2>Selesai dibaca</h2>
+
+                    <div id="completeBookshelfList" class="book_list">
+                        <!-- <article class="book_item">
+                            <div>
+                                <h3>Book Title</h3>
+                                <p>Penulis: John Doe</p>
+                                <p>Tahun: 2002</p>
+                            </div>
+
+                            <div class="action">
+                                <button class="green">
+                                    <i class="fa-solid fa-rotate"></i>
+                                </button>
+                                <button class="red">
+                                    <i class="fa-solid fa-trash-can"></i>
+                                </button>
+                            </div>
+                        </article> -->
+                    </div>
+                </section>
+            </div>
+
+            <div id="alert" class="alert">
+                <p>Data Buku berhasil Dihapus!</p>
+            </div>
+        </main>
+
+        <footer>
+            Tugas Akhir Belajar Membuat Front-End Web untuk Pemula &copy; 2022,
+            Dicoding Academy
+        </footer>
+    </body>
+</html>
